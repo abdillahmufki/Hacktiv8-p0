@@ -1,0 +1,64 @@
+input:
+[
+  ['Ecommerce', 'Tikipidia-17', 'Bikilipik-08', 'Bhinniki-07', 'BleBle.cim-15'],
+  ['Tourism', 'Triviliki-16', 'Tikit.cim-12'],
+  ['Healthtech', 'Hilidic-15'],
+  ['Agrotech', 'Siyirbix-17', 'TikingSiyir.ci-16']
+]
+
+process:
+- loop input, ambil array dalam
+
+i    perStartUp = startUpList[i]
+0    ['Ecommerce', 'Tikipidia-17', 'Bikilipik-08', 'Bhinniki-07', 'BleBle.cim-15']
+    
+    - ambil dulu sektornya
+    perSektor = perStartUp[0]; // Ecommerce
+    perSektorCount = 0;
+    perSektorKumpulanStartUp = []; // atau string '' entar di concat
+
+    - loop setiap startup dari 1, sampai terakhir
+    j        perStartUp[j]
+    1        'Tikipidia-17'
+
+            - kita perlu split, sampai dapat perStartUpSplitted = ['Tikipidia', '17']
+            - perStartUpNama = perStartUpSplitted[0]; // Tikipidia
+            - perStartUpVal = Number(perStartupSplitted[1]); // '17' => 17
+
+            - cek valuasi, kalau >= 14
+            perSektorCount++
+            perSektorKumpulanStartUp.push('Tikipidia');
+
+    2        'Bikilipik-08'
+            split, dapet nama, dapet valuasi
+            tapi tidak >= 14
+
+    3        'Bhinniki-07'
+            split, dapet nama, dapet valuasi
+            tapi tidak >= 14
+
+    4        'BleBle.cim-15'
+            split, dapet nama, dapet valuasi (15)
+            >= 14
+            perSektorCount++
+            perSektorKumpulanStartUp.push('BleBle.cim');
+
+1    ['Tourism', 'Triviliki-16', 'Tikit.cim-12']
+idem
+
+2    ['Healthtech', 'Hilidic-15']
+idem
+
+3    ['Agrotech', 'Siyirbix-17', 'TikingSiyir.ci-16']
+idem
+
+
+output:
+// Startup unicorn
+
+// Ecommerce, 2 startup (Tikipidia, BleBle.cim)
+// Tourism, 1 startup (Triviliki)
+// Healthtech, 1 startup (Hilidic)
+// Agrotech, 2 startup (Siyirbix, TikingSiyir.ci)
+
+// Total 6 startup unicorn

@@ -1,0 +1,82 @@
+program / aplikasi / software / script
+=> kumpulan statement (instruksi)
+
+statement, 
+=> instruksi (kalimat) dengan syntax cara tulis (tata bahasa), sesuai dengan language specification
+
+flow,
+=> alur program standard, itu akan mulai dari instruksi pertama, sampai instruksi terakhir
+
+data => number, boolean, string
+data => value, type, built-in boolean
+(variable declaration)
+
+scope => pengenalan variable (daur hidup)
+sifat 1: luar dikenali di dalam
+sifat 2: dalam tidak dikenali di luar
+
+expression
+// expression => sesuatu yang setelah dievaluasi akan jadi satu nilai (data)
+// evaluasi => proses operasi
+
+operators
+// operator => symbol khusus untuk melakukan operasi tertentu
+// operator precedency <-- further reading
+
+control flow
+control flow statement => instruksi2 yang bikin kita bisa manipulasi alur standard dari program kita
+
+conditional => percabangan atau pintu
+
+-------
+
+trip jakarta ke surabaya
+
+ada 2 jalan:
+- utara (100km)
+- selatan (100km)
+
+kapan kita mesti lewat jalur utara ? kalau selatan macet
+kapan kita mesti lewat jalur selatan ? kalau utara macet
+
+goal: pengen sampe cepet2
+
+------
+
+anak masih sekolah, mau main game, ibunya bilang, kamu hanya boleh main game, kalau nilainya 90 ke atas
+
+nilai = 60
+
+apakah si anak boleh main ? tidak
+
+nilai = 95
+
+apakah si anak boleh main ? boleh
+maka anak akan main
+
+-------------------
+
+control flow => loop
+
+loop => pada saat kita pengen intruksi (kumpulan), diulang, mau sebanyak kali tertentu (kita udah tau kapan mulai dan kapan berakhir), atau sampai kondisi tertentu (kita belum tahu harus berapa kali ulang, sampai kondisinya terpenuhi)
+
+-------------------
+
+teknik =>
+
+- branching 
+(usia, dan tinggi)
+
+- flagging
+(apakah sebuah angka genap)
+
+- flagging + dictionary
+(apakah sebuah huruf vokal)
+(apakah kata mengandung huruf vokal)
+
+- pattern print
+(pola kotak)
+----
+|  |
+|  |
+----
